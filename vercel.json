@@ -1,0 +1,17 @@
+{
+    "builds": [
+      {
+        "src": "src/routes/*/.{js,ts}",
+        "use": "@sveltejs/kit",
+        "config": {
+          "distDir": "build"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/$1.js"
+      }
+    ]
+  }
